@@ -62,7 +62,7 @@ function createCard(data) {
   cardWrapper.className = 'shared-moment-card mdl-card mdl-shadow--2dp';
   var cardTitle = document.createElement('div');
   cardTitle.className = 'mdl-card__title';
-  cardTitle.style.backgroundImage = 'url(' + data.image + ')';
+  cardTitle.style.backgroundImage = 'url(' + data.url + ')';
   cardTitle.style.backgroundSize = 'cover';
   cardTitle.style.height = '180px';
   cardWrapper.appendChild(cardTitle);
@@ -91,7 +91,8 @@ function updateUI(data) {
   }
 }
 
-var url = 'https://pwagram-99adf.firebaseio.com/posts.json';
+
+var url = 'https://pwa-proj-cafa9-default-rtdb.firebaseio.com/posts.json?print=pretty';
 var networkDataReceived = false;
 
 fetch(url)
